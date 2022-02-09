@@ -47,7 +47,9 @@ def ShowDataFrame():
               & (df.Geschlecht == GeschlechtsDropDown)]
     st.dataframe(data)
 
-
+@st.cache(ttl=24*60*60, suppress_st_warning=True)
+def ShowMapBox():
+    st.map()
 
 
 #ShowDataFrame()
